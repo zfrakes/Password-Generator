@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie-edge" />
+<title> Password Generator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<h1><center>Password Generator</h1>
+</header>
+<h2><center>Generate a Password</h2>
+<textarea
+readonly
+id="password"
+placeholder="Your Secure Password"
+aria-label="Generated Password"
+></textarea>
+<p><center><button id="generate">Generate Password</button><p>
+<p><center><button id="copy"><p>
+Copy to Clipboard
+</button>
+<script>
+var password = prompt("How many characters would you like your password to contain?");
+if(password >=8) {
+document.getElementById('password').value = password;
+}
+
+else {
+alert('Password is too short! Must contain at least a mininum of 8 Characters.');
+}
+if(password >=8) {
+document.getElementById('password').value = password;
+}
+
+else {
+prompt("How many characters would you like your password to contain?");
+}
+var confirmnumbericcharacters = confirm("Click OK to confirm Numeric Characters");
+var confirmlowercasecharacters = confirm("Click OK to conirm including lowercase Characters");
+var confirmuppercasecharacters = confirm("Click OK to confirm including Uppercase Characters");
+</script>
+</body>
+
+
