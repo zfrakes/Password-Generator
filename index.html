@@ -38,9 +38,52 @@ document.getElementById('password').value = password;
 else {
 prompt("How many characters would you like your password to contain?");
 }
+
 var confirmnumbericcharacters = confirm("Click OK to confirm Numeric Characters");
 var confirmlowercasecharacters = confirm("Click OK to conirm including lowercase Characters");
 var confirmuppercasecharacters = confirm("Click OK to confirm including Uppercase Characters");
+
+var clipboard = new Clipboard('Copy to Clipboard')
+var lowercase = "abcdefghijklmnopqrstuvwxyz",
+  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  numbers = "0123456789",
+  punctuation = "!@#$%^&*()_+~`|}{[]:;?><,./-=",
+  lowercaseInput = document.getElementById("lowercase"),
+  uppercaseInput = document.getElementById("uppercase"),
+  punctuationInput = document.getElementById("punctuation"),
+  numbersInput = document.getElementById("numbers"),
+  lengthInput = document.getElementById("length"),
+  passwordFeild = document.getElementById("pass-field"),
+  generateButton = document.getElementById("generate"),
+  copyButton = document.getElementById("copy"),
+  plength,
+  password,
+  passwordCharSet;
+  
+  function generate() {
+  userPassword = "";
+  passwordCharSet = "";
+  if (lowercaseInput.confirm) {
+    passwordCharSet += lowercase;
+  }
+  if (uppercaseInput.confirm) {
+    passwordCharSet += uppercase;
+  }
+  if (punctuationInput.confirm) {
+    passwordCharSet += punctuation;
+  }
+  if (numbersInput.confirm) {
+    passwordCharSet += numbers;
+  }
+  plength = Number(lengthInput.value);
+ 
+  for (let i = 0; i < plength; i++) {
+    userPassword += passwordCharSet.charAt(
+      Math.floor(Math.random() * passwordCharSet.length)
+    );
+  }
+
+
 </script>
 </body>
 
