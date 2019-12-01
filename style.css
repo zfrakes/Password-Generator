@@ -1,0 +1,50 @@
+body{
+    background-color:#F0F8FF ;
+}
+header{
+    color:grey;
+    height: 90px;
+    font-size: 20%;
+}
+h1{
+    color:black;
+    font-weight: bold;2
+    
+    
+}
+
+h2{
+    color:black;
+    font-weight: bold;
+    
+}
+#container{
+    margin: 0 auto;
+    width: 800px;
+    background-color: white;
+    
+}
+#buttonarea{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+#form{
+    display:flex;
+    justify-content: center;
+    height: 300px;
+    border-bottom:solid 2px lightgrey;
+   
+}
+
+#password{
+
+    width: 676px;
+    height: 214px;
+    border: dashed 2px lightgray;
+}
+#title{
+    border-bottom:solid 2px lightgrey;
+    height: 70px;
+}
+    

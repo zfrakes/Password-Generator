@@ -4,36 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zoey's Tutoring Project</title>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
- <header>
-<h1><center>Password Generator</center></h1>
- </header>
+    <header>
+        <h1><center>Password Generator</center></h1>
+    </header>
+    <div id="container">
+        <div id="title">
+            
+        <h2>Generate a Password</h2>
+    </div>
+       <div id="form">
+    
+       <form>
+    
+            <div class="form-group">
+                    <textarea class="form-control" id="password" rows="10"></textarea>
+                 
+                  </div>
+       </form>
+       </div>
+       <div id="buttonarea">
+            <p>
+            <button type = "button" class="btn btn-danger" id = "generate" onclick="generate()">Generate Password</button>
+            </p>
+            <p>
+                <button type="button" class="btn btn-light"id="copyPassword">Copy to Clipboard</button>
+            </p>
+        </div> 
+    </div>
 
- <h2><center>Generate a Password</center></h2>
-<textarea readonly id="password" placeholder="Your Secure Password"
-        aria-label="Generated Password"></textarea>
 
-        <p><button id = "generate" onclick="generate()">Generate Password</button></p>
- <p><button id="copyPassword" onclick="copyPassword()">
-     Copy to Clipboard
- </button></p>
 
- <script>
 
+
+
+
+
+
+
+
+
+
+<script>
+var copybutton = document.querySelector("#copyPassword")
 
  function copyPassword(){
-     document.getElementById("display").select();
-
-     document.execCommand("Copy");
-
+     console.log("working")
+     var text = document.querySelector("#password");
+     text.select();
+     document.execCommand("copy")
      alert("Password copied to clipboard!");
  }
-
+  copybutton.addEventListener("click",copyPassword) 
   function generate() {
- var userPassword = "";
-  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  userPassword = "";
+  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   lowercase = "abcdefghijklmnopqrstuvwxyz",
   numbers = "0123456789",
   punctuation = "!@#$%^&*()_+~`|}{[]:;?><,./-=",
@@ -43,15 +72,20 @@
   lowerNumberCase="abcdefghijklmnopqrstuvwxyz0123456789"                    
 
 
-   var password = prompt("How many characters would you like your password to conta in?");  
- if(password>= 8 && password <= 128){
+   var password = prompt("How many characters would you like your password to contain?"); 
+   if (password <8){
+       alert( "Password lenght must be aleast 8 characters");
+       return;
+   }
+   if (password >128){
+       alert ("Password lenght can not be more than 128 character");
+       return;
+   }
      document.getElementById('password').value = password;
- }else if (password < 8 || password > 128){
-     prompt("Password length is incorrect. Must have 8 minimum characters and 125 max characters. Try again!");
- }
 
 
- var confirmNumbericCharacters = confirm("Click OK if you want numbers in your password");
+
+var confirmNumbericCharacters = confirm("Click OK if you want numbers in your password");
 
 var confirmLowerCaseCharacters = confirm("Click OK if you want lower case characters");
 
