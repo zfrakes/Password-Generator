@@ -22,7 +22,7 @@
        <form>
     
             <div class="form-group">
-                    <textarea class="form-control" id="password" rows="10"></textarea>
+                    <textarea disabled="true" class="form-control" id="password" rows="10"></textarea>
                  
                   </div>
        </form>
@@ -74,16 +74,14 @@ var copybutton = document.querySelector("#copyPassword")
 
    var password = prompt("How many characters would you like your password to contain?"); 
    if (password <8){
-       alert( "Password lenght must be aleast 8 characters");
+       alert( "Password lenght must be atleast 8 characters");
        return;
    }
    if (password >128){
-       alert ("Password lenght can not be more than 128 character");
+       alert ("Password lenght can not contain more than 128 character");
        return;
    }
      document.getElementById('password').value = password;
-
-
 
 var confirmNumbericCharacters = confirm("Click OK if you want numbers in your password");
 
@@ -110,7 +108,7 @@ userPassword += upperNumberCase.charAt(Math.floor(Math.random() * upperNumberCas
 else if(confirmNumbericCharacters == true && confirmLowerCaseCharacters == true){
 userPassword += lowerNumberCase.charAt(Math.floor(Math.random() * lowerNumberCase.length));
 }
-   else if(confirmNumbericCharacters == true){
+else if(confirmNumbericCharacters == true){
 userPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
 }
 else if(confirmLowerCaseCharacters == true){
