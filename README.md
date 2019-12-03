@@ -9,15 +9,15 @@ This password generator prompts the user to choose numbers, uppercase letters, l
 * HTML
 * Bootstrap 4
 * CSS
-* JavaScrpit 
-
+* JavaScript
 
 ## Launch 
+To lauch this application click or copy and paste the following link in your browser.
+
 https://zfrakes.github.io/Password-Generator/
 
 ## Illustration/Image 
-![/Users/Zoey/code/Password-Generator/Images /Password Generator .png]("Password Generator")
-
+![alt text](./Password-generator.png "Password Generator")
 ## Author 
 This application was created by Zoey Frakes. To contact please email at zfrakes811@gmail.com
 
