@@ -10,7 +10,7 @@ h1{
     color:darkgray;
     font-weight: bold;
     font-family: 'Special Elite', cursive;
-    
+    font-size: 65px;
     
 }
 
@@ -22,7 +22,7 @@ h2{
 #container{
     margin: 0 auto;
     width: 800px;
-    background-color: white;
+    background-color: #1b6ca8;
     
 }
 #buttonarea{

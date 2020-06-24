@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Password Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <h1><center>Password Generator</center></h1>
+        <h1>
+            <center>Password Generator</center>
+        </h1>
     </header>
+
     <div id="container">
         <div id="title">
-            
-        <h2>Generate a Password</h2>
-    </div>
-       <div id="form">
-    
-       <form>
-    
-            <div class="form-group">
+
+            <h2>Generate a Password</h2>
+        </div>
+        <div id="form">
+
+            <form>
+
+                <div class="form-group">
                     <textarea disabled="true" class="form-control" id="password" rows="10"></textarea>
-                 
-                  </div>
-       </form>
-       </div>
-       <div id="buttonarea">
+
+                </div>
+            </form>
+        </div>
+        <div id="buttonarea">
             <p>
-            <button type = "button" class="btn btn-danger" id = "generate" onclick="generate()">Generate Password</button>
+                <button type="button" class="btn btn-danger" id="generate" onclick="generate()">Generate
+                    Password</button>
             </p>
             <p>
-                <button type="button" class="btn btn-light"id="copyPassword">Copy to Clipboard</button>
+                <button type="button" class="btn btn-light" id="copyPassword">Copy to Clipboard</button>
             </p>
-        </div> 
+        </div>
     </div>
 
 
@@ -50,89 +57,89 @@
 
 
 
-<script>
-var copybutton = document.querySelector("#copyPassword")
 
- function copyPassword(){
-     console.log("working")
-     var text = document.querySelector("#password");
-     text.select();
-     document.execCommand("copy")
-     alert("Password copied to clipboard!");
- }
-  copybutton.addEventListener("click",copyPassword) 
-  function generate() {
-  userPassword = "";
-  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  lowercase = "abcdefghijklmnopqrstuvwxyz",
-  numbers = "0123456789",
-  punctuation = "!@#$%^&*()_+~`|}{[]:;?><,./-=",
-  allPossCases ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=", 
-  upperLowerCase ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",    
-  upperNumberCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"                   
-  lowerNumberCase="abcdefghijklmnopqrstuvwxyz0123456789"                    
+    <script>
+        var copybutton = document.querySelector("#copyPassword")
 
-
-   var password = prompt("How many characters would you like your password to contain?"); 
-   if (password <8){
-       alert( "Password lenght must be atleast 8 characters");
-       return;
-   }
-   if (password >128){
-       alert ("Password lenght can not contain more than 128 character");
-       return;
-   }
-     document.getElementById('password').value = password;
-
-var confirmNumbericCharacters = confirm("Click OK if you want numbers in your password");
-
-var confirmLowerCaseCharacters = confirm("Click OK if you want lower case characters");
-
-var confirmUpperCaseCharacters = confirm("Click OK if you want upper case characters");
-
-var confirmSpecialCharcters = confirm("Click Ok if you want special character");
+        function copyPassword() {
+            console.log("working")
+            var text = document.querySelector("#password");
+            text.select();
+            document.execCommand("copy")
+            alert("Password copied to clipboard!");
+        }
+        copybutton.addEventListener("click", copyPassword)
+        function generate() {
+            userPassword = "";
+            uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            lowercase = "abcdefghijklmnopqrstuvwxyz",
+                numbers = "0123456789",
+                punctuation = "!@#$%^&*()_+~`|}{[]:;?><,./-=",
+                allPossCases = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=",
+                upperLowerCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+                upperNumberCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+            lowerNumberCase = "abcdefghijklmnopqrstuvwxyz0123456789"
 
 
- for(let i = 0; i < password; i++){
-    if (confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true){  
-userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length ) - 1);
-}
-else if(confirmSpecialCharacters == true && confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true){  
-userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length ) - 1);
-}
-    else if(confirmUpperCaseCharacters == true && confirmLowerCaseCharacters == true){
-userPassword += upperLowerCase.charAt(Math.floor(Math.random() * upperLowerCase.length));
-}
-else if(confirmUpperCaseCharacters == true && confirmNumbericCharacters == true){
-userPassword += upperNumberCase.charAt(Math.floor(Math.random() * upperNumberCase.length)) ;
-}
-else if(confirmNumbericCharacters == true && confirmLowerCaseCharacters == true){
-userPassword += lowerNumberCase.charAt(Math.floor(Math.random() * lowerNumberCase.length));
-}
-else if(confirmNumbericCharacters == true){
-userPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
-}
-else if(confirmLowerCaseCharacters == true){
-userPassword += lowercase.charAt(Math.floor(Math.random() * lowercase.length));
-}
-else if(confirmUpperCaseCharacters == true){
-userPassword += uppercase.charAt(Math.floor(Math.random() * uppercase.length));
-}
+            var password = prompt("How many characters would you like your password to contain?");
+            if (password < 8) {
+                alert("Password lenght must be atleast 8 characters");
+                return;
+            }
+            if (password > 128) {
+                alert("Password lenght can not contain more than 128 character");
+                return;
+            }
+            document.getElementById('password').value = password;
 
- else if(confirmSpecialCharacters == true && confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true){  
-userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length ) - 1);
-}
-}
-document.getElementById("password").value= userPassword;
-  } 
+            var confirmNumbericCharacters = confirm("Click OK if you want numbers in your password");
+
+            var confirmLowerCaseCharacters = confirm("Click OK if you want lower case characters");
+
+            var confirmUpperCaseCharacters = confirm("Click OK if you want upper case characters");
+
+            var confirmSpecialCharcters = confirm("Click Ok if you want special character");
 
 
+            for (let i = 0; i < password; i++) {
+                if (confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true) {
+                    userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length) - 1);
+                }
+                else if (confirmSpecialCharacters == true && confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true) {
+                    userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length) - 1);
+                }
+                else if (confirmUpperCaseCharacters == true && confirmLowerCaseCharacters == true) {
+                    userPassword += upperLowerCase.charAt(Math.floor(Math.random() * upperLowerCase.length));
+                }
+                else if (confirmUpperCaseCharacters == true && confirmNumbericCharacters == true) {
+                    userPassword += upperNumberCase.charAt(Math.floor(Math.random() * upperNumberCase.length));
+                }
+                else if (confirmNumbericCharacters == true && confirmLowerCaseCharacters == true) {
+                    userPassword += lowerNumberCase.charAt(Math.floor(Math.random() * lowerNumberCase.length));
+                }
+                else if (confirmNumbericCharacters == true) {
+                    userPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                }
+                else if (confirmLowerCaseCharacters == true) {
+                    userPassword += lowercase.charAt(Math.floor(Math.random() * lowercase.length));
+                }
+                else if (confirmUpperCaseCharacters == true) {
+                    userPassword += uppercase.charAt(Math.floor(Math.random() * uppercase.length));
+                }
 
- </script>
+                else if (confirmSpecialCharacters == true && confirmNumbericCharacters == true && confirmLowerCaseCharacters == true && confirmNumbericCharacters == true) {
+                    userPassword += allPossCases.charAt(Math.floor(Math.random() * allPossCases.length) - 1);
+                }
+            }
+            document.getElementById("password").value = userPassword;
+        }
+
+
+
+    </script>
 
 
 
 </body>
+
 </html>
-
-
