@@ -12,9 +12,8 @@ This password generator prompts the user to choose numbers, uppercase letters, l
 * JavaScript
 
 ## Launch 
-To lauch this application click or copy and paste the following link in your browser.
-
-https://zfrakes.github.io/Password-Generator/
+ 
+Password Generator [live demo link](https://zfrakes.github.io/Password-Generator/)
 
 ## Illustration/Image 
 ![alt text](./Password-g.png "Password Generator")
