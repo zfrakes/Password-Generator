@@ -3,7 +3,7 @@
 ## About/Description
  A password generator, is a software tool that creates random or customized passwords base on users' preferences. It helps users to create stronger passwords that provide greater security for a given type of access. 
 
-Password Generator prompts a user to choose numbers, uppercase letters, lowercase letters, and special characters when creating their password. Users must choose the length of 8-128 characters. If a user does not meet the requirements an alert will appear and the user will not be able to move forward with creating their random password. After selecting all of their preferred character types, the password generator will produce a random complex/strong password for the user.
+The Password Generator app prompts a user to choose numbers, uppercase letters, lowercase letters, and special characters when creating their password. Users must choose the length of 8-128 characters. If a user does not meet the requirements an alert will appear and the user will not be able to move forward with creating their random password. After selecting all of their preferred character types, the password generator will produce a random complex/strong password for the user.
 
 ## Technologies/Languages 
 * HTML
