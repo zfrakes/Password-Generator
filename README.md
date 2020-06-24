@@ -17,7 +17,7 @@ To lauch this application click or copy and paste the following link in your bro
 https://zfrakes.github.io/Password-Generator/
 
 ## Illustration/Image 
-![alt text](./Password-generator.png "Password Generator")
+![alt text](./Password-g.png "Password Generator")
 ## Author 
 This application was created by Zoey Frakes. To contact please email at zfrakes811@gmail.com
 
