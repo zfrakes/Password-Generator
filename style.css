@@ -24,21 +24,22 @@ h2{
     margin: 0 auto;
     width: 800px;
     background-color: #1b6ca8;
-    
+    border: 2px solid darkgray;
+    border-radius: 8px;
     
 }
 #buttonarea{
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
+    
 }
 #form{
     display:flex;
     justify-content: center;
     height: 300px;
     border-bottom:solid 2px lightgrey;
-    border: 2px solid darkgray;
-  border-radius: 8px;
+   
    
 }
 
@@ -51,7 +52,6 @@ h2{
 #title{
     border-bottom:solid 2px lightgrey;
     height: 70px;
-    border: 2px solid darkgray;
-  border-radius: 8px;
+    
 }
     
