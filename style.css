@@ -17,12 +17,14 @@ h1{
 h2{
     color:black;
     font-weight: bold;
-    
+    font-family: 'Special Elite', cursive;
+    text-align: center;
 }
 #container{
     margin: 0 auto;
     width: 800px;
     background-color: #1b6ca8;
+    
     
 }
 #buttonarea{
