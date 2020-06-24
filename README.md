@@ -17,8 +17,11 @@ Password Generator [live demo link](https://zfrakes.github.io/Password-Generator
 
 ## Illustration/Image 
 ![alt text](./Password-g.png "Password Generator")
-## Author 
-This application was created by Zoey Frakes. To contact please email at zfrakes811@gmail.com
+## Author
+
+This application was created by Zoey Frakes
 
 ## License 
-Copyright © 2019 Zoey Frakes. All Rights Reserved.
+Password Generator is free software and can redistribute. This application was developed to help create a random password.
+
+Copyright © Zoey Frakes 2019-2020 All Rights Reserved.
